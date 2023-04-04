@@ -13,9 +13,26 @@
 Console.Write("Введите количество элементов массива: ");
 int l = 0;
 int.TryParse(Console.ReadLine()!, out l);
-string[] array = new string[l-1];
-for (int i = 0; i <= array.Length; i++)
+string[] array = new string[l];
+for (int i = 0; i <= array.Length - 1; i++)
 {
     Console.Write($"Введите {i}-ый элемент массива: ");
     array[i] = Console.ReadLine();
+}
+int lNewArray = 0;
+for (int i = 0; i <= array.Length - 1; i++)
+{
+    if (array[i].Length <= 3) lNewArray++;
+}
+
+string[] newArray = new string[lNewArray];
+int j = 0;
+
+for (int i = 0; i <= array.Length - 1; i++)
+{
+    if (array[i].Length <= 3)
+    {
+        newArray[j] = array[i];
+        j++;
+    }
 }
