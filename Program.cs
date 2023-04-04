@@ -14,3 +14,8 @@ Console.Write("Введите количество элементов масси
 int l = 0;
 int.TryParse(Console.ReadLine()!, out l);
 string[] array = new string[l-1];
+for (int i = 0; i <= array.Length; i++)
+{
+    Console.Write($"Введите {i}-ый элемент массива: ");
+    array[i] = Console.ReadLine();
+}
